@@ -1,0 +1,27 @@
+                                        //EXTEND
+
+%img-shared{
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    height:250px;
+}
+
+%bloque-shared{
+    display: flex;
+    position: relative;
+}
+
+%sides-shared{
+    align-items:center;
+    justify-content: center;
+}
+
+%middle-shared{
+    border-radius:50%;
+    padding:15px;
+    margin:auto 5px;
+    width:29%;
+    text-align:center;
+    font-size: 10px;
+}

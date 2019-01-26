@@ -1,0 +1,85 @@
+@import 'variables';
+@import 'extend';
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+//SCSS
+
+.bloque{
+    @extend %bloque-shared;
+    margin:$margin__primary;
+    background-color:$color__primary;
+    width: $width__primary;
+    height:$height__primary;
+    
+    &__left{
+        @extend %bloque-shared;
+        width:$bloque__width;
+        height:$bloque__height;
+        @extend %sides-shared;
+        
+        &_img{ @extend %img-shared;}
+    }
+
+    &__right{
+        width:$bloque__width;
+        height:$bloque__height;
+        margin:$right__margin;
+    
+        &_about{
+            margin:$right__head_margin;
+            
+            h1{
+                font-size:$right__head_titleFontSize;
+               color:$right__head_titleColor;
+            }
+
+            h2{
+                font-size: $right__head_subtitleFontSize;
+                font-weight: $right__head_subtitleFontWeight;
+                color:$right__head_subtitleColor;
+            }
+        }
+
+        &_middle{
+            @extend %bloque-shared;
+            line-height:$right__middle_lineHeight;
+            margin:$right__middle_margin;
+            @extend %sides-shared;
+            width:$right__middle_width;
+            align-content:left;
+            
+            &--1{
+                @extend %middle-shared;
+                background-color: $myResumeColor;
+            }
+
+            &--2{
+                @extend %middle-shared;
+                background-color: $myWorkColor;
+            }
+
+            &--3{
+                @extend %middle-shared;
+                background-color: $mySkillsColor;
+                color:white;
+            }
+        }
+        
+        &_bottom{
+            @extend %bloque-shared;
+            width:$right__bottom_width;
+            font-family: $right__bottom_fontFamily;
+            font-size:$right__bottom_fontSize;
+            color:$right__bottom_paragraphColor;
+            font-weight:$right__bottom_paragraphWeight;
+            line-height:$lHeight;
+        }
+
+    }
+    
+}
